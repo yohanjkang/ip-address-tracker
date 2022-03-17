@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <section id="ip-tracker">
+      <h1 class="ip-tracker__title">IP Address Tracker</h1>
+      <form class="ip-input" role="search" method="get">
+        <label>
+          <input
+            type="text"
+            name="ipInput"
+            id="ip-input"
+            placeholder="Search for any IP address or domain"
+          /><button class="ip-input__submit">
+            <img src="./images/icon-arrow.svg" alt="Arrow icon" />
+          </button>
+        </label>
+      </form>
+      <div class="ip-info">
+        <div class="ip-info__division">
+          <p>IP Address</p>
+          <h2 class="ip-info__result">192.212.174.101</h2>
+        </div>
+        <div class="ip-info__division">
+          <p>Location</p>
+          <h2 class="ip-info__result">Brooklyn, NY</h2>
+        </div>
+        <div class="ip-info__division">
+          <p>Timezone</p>
+          <h2 class="ip-info__result">UTC -05:00</h2>
+        </div>
+        <div class="ip-info__division">
+          <p>ISP</p>
+          <h2 class="ip-info__result">SpaceX Starlink</h2>
+        </div>
+      </div>
+    </section>
+    <section id="map-display">
+      <div id="map"></div>
+    </section>
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
